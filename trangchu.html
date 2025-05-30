@@ -1,0 +1,463 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Hobeus
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Reset and base */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  color: #333;
+  background: #fff;
+}
+a {
+  text-decoration: none;
+  color: #eebf2f;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header top nav */
+header {
+  border-bottom: 1px solid #ccc;
+}
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+}
+.top-nav .logo img {
+  width: 50px;
+  height: 50px;
+}
+.top-nav nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.top-nav nav ul li a {
+  color: #000;
+  font-weight: 700;
+}
+.top-nav nav ul li a:hover {
+  color: #eebf2f;
+}
+.top-nav .contact-lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top-nav .contact-lang .phone {
+  border: 1px solid #eebf2f;
+  padding: 3px 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: #000;
+}
+.top-nav .contact-lang .phone i {
+  color: #eebf2f;
+}
+.top-nav .contact-lang .lang img {
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+}
+.top-nav .contact-lang .cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: #eebf2f;
+}
+
+/* Section titles */
+h2.section-title {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 28px;
+  color: #eebf2f;
+  text-align: center;
+  margin: 30px 0 15px;
+  letter-spacing: 1.5px;
+}
+
+/* Products */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0 15px;
+}
+.product-item {
+  border: 2px solid #eebf2f;
+  width: 220px; /* tăng chiều ngang để chứa đủ 2 ảnh */
+  padding: 12px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: #eebf2f;
+  position: relative;
+}
+
+.product-logo {
+  width: 20px;
+  margin-bottom: 5px;
+}
+
+.product-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.product-images .product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.product-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+}
+
+
+/* Honey & You */
+.honey-you {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  padding: 0 20px;
+}
+.honey-you .item {
+  width: 180px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 28px;
+  color: #333;
+}
+.honey-you .item .caption {
+  font-weight: 700;
+  font-size: 13px;
+  color: #eebf2f;
+}
+.honey-you .item img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+  margin-bottom: 8px;
+}
+
+/* Hobeus Section */
+.hobeus-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  font-family: 'Roboto Mono', sans-serif;
+  color: #333;
+}
+.hobeus-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #eebf2f;
+}
+.hobeus-text {
+  flex: 1 1 33%;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.hobeus-text ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+.hobeus-text ul li {
+  margin-bottom: 8px;
+}
+.hobeus-video {
+  flex: 1 1 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hobeus-video iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background: #f9f9f9;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 10px;
+  color: #333;
+  padding: 20px 15px 30px;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.footer-col h3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.footer-col p, .footer-col a {
+  font-size: 10px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer-col a:hover {
+  color: #eebf2f;
+}
+.footer-col i {
+  color: #eebf2f;
+}
+.footer-social a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #eebf2f;
+  color: #000;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.footer-social a:hover {
+  background: #d4a70a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .top-nav nav ul {
+    gap: 15px;
+    font-size: 9px;
+  }
+  .top-nav .contact-lang {
+    font-size: 9px;
+  }
+  .products {
+    justify-content: center;
+    gap: 15px;
+  }
+  .product-item {
+    width: 120px;
+    font-size: 9px;
+    padding: 8px;
+  }
+  .honey-you {
+    gap: 20px;
+  }
+  .honey-you .item {
+    width: 120px;
+    font-size: 9px;
+  }
+  .hobeus-content {
+    flex-direction: column;
+  }
+  .hobeus-text, .hobeus-video {
+    flex: 1 1 100%;
+  }
+}
+
+  </style>
+ </head>
+ <body>
+  <header>
+   <div aria-label="Primary navigation" class="container top-nav" role="navigation">
+    <a aria-label="Hobeus logo" class="logo" href="#">
+     <img alt="Hou" height="50" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="50"/>
+    </a>
+    <nav>
+     <ul>
+      <li>
+       <a href="#">
+        GIỚI THIỆU
+       </a>
+      </li>
+      <li>
+       <a href="sanpham.html">
+        SẢN PHẨM
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        QUY TRÌNH SẢN XUẤT
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        MẬT ONG VÀ ĐỜI SỐNG
+       </a>
+      </li>
+      <li>
+       <a href="tintuc.html">
+        TIN TỨC VÀ SỰ KIỆN
+       </a>
+      </li>
+      <li>
+       <a href="lienhe.html">
+        HỆ THỐNG PHÂN PHỐI HOBEUS
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div aria-label="Contact and language options" class="contact-lang">
+     <div aria-label="Contact phone number" class="phone">
+      <i aria-hidden="true" class="fas fa-phone-alt">
+      </i>
+       0389843380
+     </div>
+     <div aria-label="Shopping cart with 267 items" class="cart">
+      <i aria-hidden="true" class="fas fa-shopping-cart">
+      </i>
+     </div>
+    </div>
+   </div>
+  </header>
+<section aria-label="Main banner with honey products and logo" class="banner">
+  <div class="container">
+    <div class="banner-image">
+      <img src="./img/banner.png" alt="Main banner with honey products" />
+    </div>
+  </div>
+</section>
+
+<h2 class="section-title" id="san-pham">
+  SẢN PHẨM HOBEUS
+</h2>
+
+<section aria-labelledby="san-pham" class="products">
+  <article class="product-item" role="listitem">
+
+
+    <!-- Hai ảnh mặt trước & sau nằm chung hàng -->
+   <div class="product-images">
+  <img 
+    alt="Mặt trước sản phẩm" 
+    class="product-img" 
+    src="./img/mattruoc.jpg"
+  />
+  <img 
+    alt="Mặt sau sản phẩm" 
+    class="product-img" 
+    src="./img/matsau.jpg"
+  />
+</div>
+
+
+    <!-- Tên sản phẩm -->
+    <div class="product-name" title="MẬT ONG HOA NIÊN HOBEUS">
+      MẬT ONG SẤY LẠNH HOBEUS
+    </div>
+  </article>
+</section>
+
+ 
+   </article>
+  </section>
+  <hr class="divider"/>
+  <h2 class="section-title" id="mat-ong-ban">
+   MẬT ONG &amp; BẠN
+  </h2>
+  <section aria-labelledby="mat-ong-ban" class="honey-you" role="list">
+   <article class="item" role="listitem">
+    <img alt="Customer holding hands with doctor" height="100" src="https://storage.googleapis.com/a1aa/image/eb5c600d-63cb-423c-2633-2569fee9f565.jpg" width="100"/>
+    <div class="caption">
+     Khách hàng / Người tiêu dùng
+    </div>
+   </article>
+   <article class="item" role="listitem">
+    <img alt="Honey pouring from spoon" height="100" src="https://storage.googleapis.com/a1aa/image/a00b463b-012d-4dfb-3f5d-42186e03a5b9.jpg" width="100"/>
+    <div class="caption">
+     Ong mật &amp; Bạn
+    </div>
+   </article>
+   <article class="item" role="listitem">
+    <img alt="Honeycomb and honey on spoon" height="100" src="https://storage.googleapis.com/a1aa/image/7ebc7958-e6ef-49c2-3a7b-9b2b7758e36d.jpg" width="100"/>
+    <div class="caption">
+     Sữa ong chúa &amp; Công dụng
+    </div>
+   </article>
+  </section>
+ <section class="hobeus-section">
+  <h2 class="hobeus-title">DỰ ÁN HOBEUS</h2>
+  <div class="hobeus-content">
+    <div class="hobeus-text">
+      <p>🍯 <strong>TÁI ĐỊNH NGHĨA CHẤT LƯỢNG MẬT ONG VIỆT VỚI CÔNG NGHỆ BƠM NHIỆT KẾT HỢP SÓNG SIÊU ÂM! 🚀</strong></p>
+      <p>Mật ong - món quà quý giá từ thiên nhiên, nhưng làm thế nào để đảm bảo chất lượng vẹn nguyên từ tổ ong đến tay người tiêu dùng?</p>
+      <p>🚀Dự án "Mô hình kinh doanh máy sấy mật ong bằng bơm nhiệt kết hợp sóng siêu âm" chính là giải pháp đột phá, khắc phục những hạn chế của phương pháp sấy truyền thống như cồng kềnh, tiêu tốn năng lượng, và chi phí cao.</p>
+      <p>Đội ngũ nhân sự năng động, sáng tạo với nền tảng chuyên môn đa dạng, cùng sự cố vấn từ các thầy cô giàu kinh nghiệm, đã ứng dụng công nghệ hiện đại để nâng tầm ngành mật ong Việt:</p>
+      <ul>
+        <li><strong>Bơm nhiệt:</strong> Sấy ở nhiệt độ thấp 35-40℃, giữ trọn độ tươi ngon, ngọt ngào và diệt trừ các thành phần có hại.</li>
+        <li><strong>Sóng siêu âm:</strong> Đẩy nhanh quá trình sấy và ngăn ngừa kết tinh trong mật ong.</li>
+      </ul>
+      <p>🍯Đây không chỉ là một thiết bị sấy mật ong tối ưu cho các hộ sản xuất, doanh nghiệp vừa và nhỏ, mà còn là một mô hình kinh doanh toàn diện bao gồm sản xuất, phân phối, đào tạo vận hành và hỗ trợ kỹ thuật.</p>
+      <p>🍯Dự án hướng tới khả năng nhân rộng trên toàn quốc, góp phần nâng cao giá trị chuỗi sản phẩm mật ong Việt Nam và đáp ứng tiêu chuẩn quốc tế để vươn tầm xuất khẩu. Cùng nhau, chúng ta kiến tạo tương lai cho mật ong Việt!</p>
+    </div>
+    <div class="hobeus-video">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/yj9F10nl3vY" 
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+  <footer>
+    <div class="footer-container" role="contentinfo">
+      <p>MÁY SẤY MẬT ÔNG HOBEUS</p>
+      <p>Địa chỉ: 12 Nguyễn Văn Bảo, Phường 1, Gò Vấp, Hồ Chí Minh<br>
+         Số điện thoại:  038 984 3380
+         Email: honeyhobeus@gmail.com 
+      </p>
+    </div>
+  </footer>
+ </body>
+</html>

@@ -1,0 +1,414 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Honey Products
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;display=swap" rel="stylesheet"/>
+  <style>
+   * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #7a121b;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px 40px;
+  }
+  h2.section-title {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 30px 0 15px;
+    letter-spacing: 1.5px;
+  }
+  .carousel {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .carousel-inner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+  .carousel-inner::-webkit-scrollbar {
+    display: none;
+  }
+  .item {
+    flex: 0 0 auto;
+    width: 140px;
+    border: 1px solid #f7c94e;
+    padding: 10px 10px 0 10px;
+    text-align: center;
+  }
+  .item img.product-image {
+    width: 120px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  .item img.honeycomb {
+    width: 120px;
+    height: 20px;
+    object-fit: contain;
+    margin: 0 auto 10px;
+    display: block;
+  }
+  .item .caption {
+    font-size: 9px;
+    color: #7a121b;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #b3b3b3;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+    z-index: 10;
+  }
+  .carousel-button:hover {
+    color: #7a121b;
+  }
+  .carousel-button.left {
+    left: 0;
+  }
+  .carousel-button.right {
+    right: 0;
+  }
+    /* Footer */
+footer {
+  background: #f9f9f9;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 10px;
+  color: #333;
+  padding: 20px 15px 30px;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.footer-col h3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.footer-col p, .footer-col a {
+  font-size: 10px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer-col a:hover {
+  color: #eebf2f;
+}
+.footer-col i {
+  color: #eebf2f;
+}
+.footer-social a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #eebf2f;
+  color: #000;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.footer-social a:hover {
+  background: #d4a70a;
+}
+
+/* Header top nav */
+header {
+  border-bottom: 1px solid #ccc;
+}
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+}
+.top-nav .logo img {
+  width: 50px;
+  height: 50px;
+}
+.top-nav nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.top-nav nav ul li a {
+  color: #000;
+  font-weight: 700;
+}
+.top-nav nav ul li a:hover {
+  color: #eebf2f;
+}
+.top-nav .contact-lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top-nav .contact-lang .phone {
+  border: 1px solid #eebf2f;
+  padding: 3px 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: #000;
+}
+.top-nav .contact-lang .phone i {
+  color: #eebf2f;
+}
+.top-nav .contact-lang .lang img {
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+}
+.top-nav .contact-lang .cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: #eebf2f;
+}
+
+
+  </style>
+ </head>
+ <body>
+  <header>
+   <div aria-label="Primary navigation" class="container top-nav" role="navigation">
+    <a aria-label="Hobeus logo" class="logo" href="#">
+     <img alt="Hou" height="50" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="50"/>
+    </a>
+    <nav>
+     <ul>
+      <li>
+       <a href="#">
+        GIỚI THIỆU
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        SẢN PHẨM
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        QUY TRÌNH SẢN XUẤT
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        MẬT ONG VÀ ĐỜI SỐNG
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        TIN TỨC VÀ SỰ KIỆN
+       </a>
+      </li>
+      <li>
+       <a href="#">
+        HỆ THỐNG PHÂN PHỐI HOBEUS
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <div aria-label="Contact and language options" class="contact-lang">
+     <div aria-label="Contact phone number" class="phone">
+      <i aria-hidden="true" class="fas fa-phone-alt">
+      </i>
+       0389843380
+     </div>
+     <div aria-label="Shopping cart with 267 items" class="cart">
+      <i aria-hidden="true" class="fas fa-shopping-cart">
+      </i>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <h2 class="section-title">
+    MẬT ONG XUẤT KHẨU HOBEUS
+   </h2>
+   <div class="carousel" data-carousel="carousel1">
+    <button aria-label="Scroll left" class="carousel-button left">
+     ‹
+    </button>
+    <div class="carousel-inner">
+     <div class="item">
+      <img alt="Bottle of honey with white label and yellow honeycomb design" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/e4525d3e-0e5f-4417-d504-91eb97e555eb.jpg" width="120"/>
+      <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       MẬT ONG HOA CHẮC CHỊU BEHON...
+      </div>
+     </div>
+     <div class="item">
+      <img alt="Bottle of honey with green label and black cap" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/7cbb103f-ce36-44be-3acf-20089145bfba.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       MẬT ONG HOA VẢI BEHONEX EXPO...
+      </div>
+     </div>
+     <div class="item">
+      <img alt="Bottle of honey with light green label and black cap" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/cf3d9595-ffc7-4fb9-7973-64f632c9231c.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       MẬT ONG HOA CHÒM CHÒM BEHO...
+      </div>
+     </div>
+     <div class="item">
+      <img alt="Bottle of honey with white label and black cap" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/8ed4efc8-52c7-4115-b50e-979f89ae9dd1.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       MẬT ONG XUẤT KHẨU BEHONEX E...
+      </div>
+     </div>
+    </div>
+    <button aria-label="Scroll right" class="carousel-button right">
+     ›
+    </button>
+   </div>
+   <h2 class="section-title">
+    MẬT ONG ĐẶC SẢN HOBEUS
+   </h2>
+   <div class="carousel" data-carousel="carousel2">
+    <button aria-label="Scroll left" class="carousel-button left">
+     ‹
+    </button>
+    <div class="carousel-inner">
+     <div class="item">
+      <img alt="Tall bottle of honey with white label and brown cap" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/80310652-de6b-4e56-1ba8-fa337f44a896.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       MẬT ONG THIÊN NHIÊN BEHONEY ...
+      </div>
+     </div>
+     <div class="item">
+      <img alt="Glass jar of honey with white label and gold lid" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/d614b004-ed5d-44d2-cf65-1d2b812f7723.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       MẬT ONG THIÊN NHIÊN BEHONEY ...
+      </div>
+     </div>
+     <div class="item">
+      <img alt="Glass jar of honey with white label and gold lid" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/d614b004-ed5d-44d2-cf65-1d2b812f7723.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       MẬT ONG THIÊN NHIÊN BEHONEY ...
+      </div>
+     </div>
+     <div class="item">
+      <img alt="Tall bottle of honey with white label and brown cap" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/80310652-de6b-4e56-1ba8-fa337f44a896.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       MẬT ONG ĐA HOA BEHONEY BEAR ...
+      </div>
+     </div>
+    </div>
+    <button aria-label="Scroll right" class="carousel-button right">
+     ›
+    </button>
+   </div>
+   <h2 class="section-title">
+    MẬT ONG MIX HOBEUS
+   </h2>
+   <div class="carousel" data-carousel="carousel3">
+    <button aria-label="Scroll left" class="carousel-button left">
+     ‹
+    </button>
+    <div class="carousel-inner">
+     <div class="item">
+      <img alt="Plastic container with honey and blue label" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/0afdcf29-1c74-4aab-1a82-fcb02b46f5bc.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       KẸO DẺO MẬT ONG HOA ĐẬU BIẾC...
+      </div>
+     </div>
+     <div class="item">
+      <img alt="Plastic container with honey and orange label" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/e9aced80-e5d2-4dd9-519b-3dea974256a2.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       KẸO DẺO MẬT ONG GỪNG CAY 100...
+      </div>
+     </div>
+     <div class="item">
+      <img alt="Plastic container with honey and white label" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/93fa597e-e42a-4ab4-77e7-ed033d1ed5ea.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       KẸO DẺO MẬT ONG GỪNG 100G
+      </div>
+     </div>
+     <div class="item">
+      <img alt="Dark bottle with white label and black cap" class="product-image" height="160" src="https://storage.googleapis.com/a1aa/image/a19d7134-5862-43cc-25a1-456a3e6febe3.jpg" width="120"/>
+         <img alt="Yellow honeycomb decorative image" class="honeycomb" height="100%" src="./img/z6654881653885_0d38fe6130a923ebffdc01a3e76cb66a.jpg" width="100%"/>
+      <div class="caption">
+       MẬT ONG BBQ HOBEUS
+      </div>
+     </div>
+    </div>
+    <button aria-label="Scroll right" class="carousel-button right">
+     ›
+    </button>
+   </div>
+  </div>
+  <script>
+   // Carousel scroll left/right functionality
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const inner = carousel.querySelector('.carousel-inner');
+    const btnLeft = carousel.querySelector('.carousel-button.left');
+    const btnRight = carousel.querySelector('.carousel-button.right');
+
+    btnLeft.addEventListener('click', () => {
+      inner.scrollBy({ left: -160, behavior: 'smooth' });
+    });
+    btnRight.addEventListener('click', () => {
+      inner.scrollBy({ left: 160, behavior: 'smooth' });
+    });
+  });
+  </script>
+   <footer>
+    <div class="footer-container" role="contentinfo">
+      <p>MÁY SẤY MẬT ÔNG HOBEUS</p>
+      <p>Địa chỉ: 12 Nguyễn Văn Bảo, Phường 1, Gò Vấp, Hồ Chí Minh<br>
+         Số điện thoại:  038 984 3380
+         Email: honeyhobeus@gmail.com 
+      </p>
+    </div>
+  </footer>
+ </body>
+</html>
